@@ -1,4 +1,29 @@
 <html>
+
+<script>
+    var r = 255;
+    var g = 255;
+    var b = 255;
+  
+    function sliderChange(){
+      document.body.style.backgroundColor = ("rgb("+r+","+g+","+b+")")
+    }
+  
+    function sliderChange(val){
+      r=val;
+      document.getElementById("rValue").innerHTML=r;
+      sliderChange();
+      
+    function sliderChange(val){
+      g=val;
+      document.getElementById("rValue").innerHTML=r;
+      sliderChange();
+      
+    function sliderChange(val){
+      b=val;
+      document.getElementById("rValue").innerHTML=r;
+      sliderChange();
+
 <body>
   <a herf = "index.html">home</a> <br>
   <input type="range" id="slider" min="0" max="255" onchange="sliderChangeR(this.value)"/> <br>
