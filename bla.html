@@ -13,17 +13,18 @@
       r=val;
       document.getElementById("rValue").innerHTML=r;
       sliderChange();
-      
+    }
     function sliderChangeg(val){
       g=val;
-      document.getElementById("rValue").innerHTML=g;
+      document.getElementById("gValue").innerHTML=g;
       sliderChange();
-      
+    }
     function sliderChangeb(val){
       b=val;
-      document.getElementById("rValue").innerHTML=b;
+      document.getElementById("bValue").innerHTML=b;
       sliderChange();
-
+    }
+    </script>
 <body>
   <a herf = "index.html">home</a> <br>
   <input type="range" id="slider" min="0" max="255" onchange="sliderChanger(this.value)"/> <br>
