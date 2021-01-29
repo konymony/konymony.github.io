@@ -2,6 +2,8 @@ let stars;
 let playerImage;
 let meteorImage;
 let meteorChance = 0.02;
+let score = 0;
+let GAMEOVER = 0;
 let player = {
     x:500,
     y:550,
@@ -9,7 +11,7 @@ let player = {
     xVel:0,
     dazed:0
 }
-let meteors = [{.
+let meteors = [{
     x:500,
     y:0,
     yVel:0
@@ -91,6 +93,9 @@ function keyPressed(){
 
 function keyReleased(){
     keysPressed[key] = false;
+}
+if (Math.random()<0.005){
+    meteorChance += 0.01
 }
 
 function overlappingRects(x1, y1, w1, h1, x2, y2, w2, h2) {
