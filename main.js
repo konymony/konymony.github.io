@@ -94,18 +94,18 @@ function keyReleased(){
 }
 
 function overlappingRects(x1, y1, w1, h1, x2, y2, w2, h2) {
-    if (x1 >= x2 && x1 <= x2 + w2 && y1 >= y2 && y1 <= y2 + h2) {
-    return true;
+    
+    if ((x1<=x2 && x2<=x1+w1)&&(y1<=y2 && y2<=y1+h1)){
+        return true;
     }
-    if (x1 + w1 >= x2 && x1 + w1 <= x2 + w2 && y1 >= y2 && y1 <= y2 + h2) {
-    return true;
+    if ((x1<=x2+w2 && x2+w2<=x1+w1)&&(y1<=y2 && y2<=y1+h1)){
+        return true;
     }
-    /*if (x1 + w1 >= x2 && x1 + w1 <= x2 + w2 && y1 + h1 >= y2 && y1 + h1 <= y2 + h2) {
-    return true;
+    if ((x1<=x2 && x2<=x1+w1)&&(y1<=y2+h2 && y2+h2<=y1+h1)){
+        return true;
     }
-    if (x1 >= x2 && x1 <= x2 + w2 && y1 + h1 >= y2 && y1 + h1 <= y2 + h2) {
-    return true;
-    }*/
+    if ((x1<=x2+w2 && x2+w2<=x1+w1)&&(y1<=y2+h2 && y2+h2<=y1+h1)){
+        return true;
+    }
     return false;
 }
-//browser-sync start --server --files ["* .html", "* .css", "* .js"]
