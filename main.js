@@ -27,6 +27,7 @@ function setup(){
     createCanvas(1000,700);
 }
 function draw(){
+    if(GAMEOVER==0){
     background(0);
     image(stars,0,0,1000,700);
 
@@ -91,6 +92,10 @@ function draw(){
    if (Math.random()<0.005){
        meteorChance += 0.01;
    }
+}
+if(player.hp<=0){
+    GAMEOVER=1;
+}
 }
 
 function keyPressed(){
