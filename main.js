@@ -29,6 +29,11 @@ function setup(){
 function draw(){
     background(0);
     image(stars,0,0,1000,700);
+
+
+    textSize(32);
+    fill(255,255,255);
+    text(score,900,40);
     image(playerImage, player.x, player.y);
     noFill();
     stroke(255);
@@ -73,6 +78,7 @@ function draw(){
    meteors.forEach((meteor,i) =>{
        if(meteor.y> height){
            meteors.splice(i,1);
+           score += 1;
        }
    })
    if(Math.random()<meteorChance){
